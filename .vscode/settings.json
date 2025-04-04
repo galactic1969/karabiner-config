@@ -1,0 +1,22 @@
+{
+  "deno.enable": true,
+  "deno.lint": true,
+  "deno.config": "./deno.jsonc",
+  "cSpell.words": [
+    "hjkl",
+    "Karabiner",
+    "spacebar"
+  ],
+  "[typescript]": {
+    "editor.defaultFormatter": "denoland.vscode-deno",
+    "editor.formatOnSave": true
+  },
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        "match": "\\.ts$",
+        "cmd": "deno run -A index.ts"
+      },
+    ]
+  }
+}
