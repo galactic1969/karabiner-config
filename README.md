@@ -4,12 +4,12 @@ macOS用のKarabiner-Elements設定ファイルを管理するプロジェクト
 
 ## 概要
 
-[Karabiner-Elements](https://karabiner-elements.pqrs.org/)は、macOSのキーボードカスタマイズツールです。
+[Karabiner-Elements](https://karabiner-elements.pqrs.org/)はmacOSのキーボードカスタマイズツールです。
 このプロジェクトでは、[karabiner-ts](https://deno.land/x/karabinerts)を使用してTypeScriptでKarabinerの設定を生成します。
 
-## 通知機能
+## 通知
 
-設定適用時に視覚的・聴覚的フィードバックを提供：
+実行時にmacOSの通知が表示されます。
 
 - 成功時：成功通知と効果音
 - 失敗時：エラー通知と警告音
@@ -36,7 +36,7 @@ macOS用のKarabiner-Elements設定ファイルを管理するプロジェクト
    deno run -A index.ts
    ```
 
-vscodeを使用しており、RunOnSaveをインストールしている場合は保存時に自動で実行されます。
+vscodeを使用しており、かつRunOnSaveをインストールしている場合は保存時に自動で実行されます。
 
 ## カスタマイズ方法
 
