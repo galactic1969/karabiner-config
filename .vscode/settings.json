@@ -5,6 +5,7 @@
   "cSpell.words": [
     "hjkl",
     "Karabiner",
+    "osascript",
     "spacebar"
   ],
   "[typescript]": {
@@ -15,7 +16,8 @@
     "commands": [
       {
         "match": "\\.ts$",
-        "cmd": "deno run -A index.ts"
+        "cmd": "deno run -A index.ts",
+        "autoShowOutputPanel": "error",
       },
     ]
   }
