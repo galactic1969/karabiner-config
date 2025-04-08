@@ -3,7 +3,9 @@
   "deno.lint": true,
   "deno.config": "./deno.jsonc",
   "cSpell.words": [
+    "googlecode",
     "hjkl",
+    "iterm",
     "Karabiner",
     "osascript",
     "spacebar"

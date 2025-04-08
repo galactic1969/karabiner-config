@@ -1,4 +1,5 @@
 import { map, rule, RuleBuilder } from "https://deno.land/x/karabinerts@1.31.0/deno.ts";
+import { ignoreITerm } from "../bundle-identifiers.ts";
 
 /**
  * 疑似Escape
@@ -22,7 +23,7 @@ const escapeMappings: RuleBuilder[] = [
  * control + a / e で行頭 / 行末に移動
  */
 const jumpToStartOrEnd: RuleBuilder[] = [
-  rule("ctrl + a ▶ emacs jump to start").manipulators(
+  rule("ctrl + a ▶ emacs jump to start", ignoreITerm()).manipulators(
     [
       map("a", "control")
         .to("left_arrow", "command"),
