@@ -41,14 +41,14 @@ const emacsMark: RuleBuilder[] = [
           "down_arrow",
         ])((key) =>
           map(key)
-            .to(key, "shift")
+            .to(key, "shift", { repeat: true })
         ),
         // cmd + hjkl (vim style)
         withMapper(
           ["h", "j", "k", "l"],
         )((key) =>
-          map(key, "command")
-            .to(key, ["shift", "command"])
+          map(key, "control")
+            .to(key, ["shift", "control"], { repeat: true })
         ),
         // control + a / e
         map("a", "control")
@@ -57,9 +57,14 @@ const emacsMark: RuleBuilder[] = [
           .to("right_arrow", ["command", "shift"]),
         // control + b / f
         map("b", "control")
-          .to("left_arrow", ["shift"]),
+          .to("left_arrow", ["shift"], { repeat: true }),
         map("f", "control")
-          .to("right_arrow", ["shift"]),
+          .to("right_arrow", ["shift"], { repeat: true }),
+        // control + n / p
+        map("n", "control")
+          .to("down_arrow", ["shift"], { repeat: true }),
+        map("p", "control")
+          .to("up_arrow", ["shift"], { repeat: true }),
       ],
     ),
 ];

@@ -33,7 +33,25 @@ const jumpToStartOrEnd: RuleBuilder[] = [
   ),
 ];
 
+const moveCursor: RuleBuilder[] = [
+  rule("ctrl + a ▶ emacs jump to start", ignoreITerm).manipulators(
+    [
+      // control + b / f
+      map("b", "control")
+        .to("left_arrow", {}, { repeat: true }),
+      map("f", "control")
+        .to("right_arrow", {}, { repeat: true }),
+      // control + n / p
+      map("n", "control")
+        .to("down_arrow", {}, { repeat: true }),
+      map("p", "control")
+        .to("up_arrow", {}, { repeat: true }),
+    ],
+  ),
+];
+
 export const generalUse: RuleBuilder[] = [
   ...escapeMappings,
   ...jumpToStartOrEnd,
+  ...moveCursor,
 ];
