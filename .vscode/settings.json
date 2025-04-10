@@ -3,12 +3,14 @@
   "deno.lint": true,
   "deno.config": "./deno.jsonc",
   "cSpell.words": [
+    "eisuu",
     "googlecode",
     "hjkl",
     "iterm",
     "Karabiner",
     "osascript",
-    "spacebar"
+    "spacebar",
+    "Trackpad"
   ],
   "[typescript]": {
     "editor.defaultFormatter": "denoland.vscode-deno",
