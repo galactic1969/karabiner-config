@@ -23,7 +23,7 @@ const escapeMappings: RuleBuilder[] = [
  * control + a / e で行頭 / 行末に移動
  */
 const jumpToStartOrEnd: RuleBuilder[] = [
-  rule("ctrl + a ▶ emacs jump to start", ignoreITerm()).manipulators(
+  rule("ctrl + a ▶ emacs jump to start", ignoreITerm).manipulators(
     [
       map("a", "control")
         .to("left_arrow", "command"),

@@ -14,13 +14,13 @@ const EMACS_MARKING = "emacs_marking";
  * emacsのマーク系
  */
 const emacsMark: RuleBuilder[] = [
-  rule("ctrl + space ▶ emacs mark set", ignoreIDEs(), ifVar(EMACS_MARKING, 0)).manipulators(
+  rule("ctrl + space ▶ emacs mark set", ignoreIDEs, ifVar(EMACS_MARKING, 0)).manipulators(
     [
       map("spacebar", "control")
         .toVar(EMACS_MARKING, 1),
     ],
   ),
-  rule("ctrl + space ▶ emacs mark unset", ignoreIDEs(), ifVar(EMACS_MARKING, 1)).manipulators(
+  rule("ctrl + space ▶ emacs mark unset", ignoreIDEs, ifVar(EMACS_MARKING, 1)).manipulators(
     [
       map("spacebar", "control")
         .toVar(EMACS_MARKING, 0),
@@ -30,7 +30,7 @@ const emacsMark: RuleBuilder[] = [
         .toVar(EMACS_MARKING, 0),
     ],
   ),
-  rule("marking中のカーソル移動はShiftを維持", ignoreIDEs(), ifVar(EMACS_MARKING, 1))
+  rule("marking中のカーソル移動はShiftを維持", ignoreIDEs, ifVar(EMACS_MARKING, 1))
     .manipulators(
       [
         // 矢印キー
