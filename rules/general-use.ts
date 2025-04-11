@@ -18,6 +18,6 @@ const escapeMappings: RuleBuilder[] = [
   ),
 ];
 
-export const generalUse: RuleBuilder[] = [
+export const generalUseRules: RuleBuilder[] = [
   ...escapeMappings,
 ];

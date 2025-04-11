@@ -103,7 +103,7 @@ const moveCursor: RuleBuilder[] = [
   ),
 ];
 
-export const emacsRule: RuleBuilder[] = [
+export const emacsRules: RuleBuilder[] = [
   ...emacsMark,
   ...jumpToStartOrEnd,
   ...moveCursor,

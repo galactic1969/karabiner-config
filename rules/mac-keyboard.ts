@@ -47,7 +47,7 @@ const cmdToKana: RuleBuilder[] = [
     ]),
 ];
 
-export const macKeyboard: RuleBuilder[] = [
+export const macKeyboardRules: RuleBuilder[] = [
   ...capsLockToControl,
   ...cmdToKana,
 ];

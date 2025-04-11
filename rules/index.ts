@@ -1,3 +1,3 @@
-export { emacsRule } from "./emacs.ts";
-export { generalUse } from "./general-use.ts";
-export { macKeyboard } from "./mac-keyboard.ts";
+export { emacsRules } from "./emacs.ts";
+export { generalUseRules } from "./general-use.ts";
+export { macKeyboardRules } from "./mac-keyboard.ts";

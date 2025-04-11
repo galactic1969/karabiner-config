@@ -1,6 +1,6 @@
 import { writeToProfile } from "https://deno.land/x/karabinerts@1.31.0/deno.ts";
 
-import { emacsRule, generalUse, macKeyboard } from "./rules/index.ts";
+import { emacsRules, generalUseRules, macKeyboardRules } from "./rules/index.ts";
 
 const SUCCESS_SOUND = "Funk.aiff";
 const FAILURE_SOUND = "Basso.aiff";
@@ -9,7 +9,7 @@ const applyKarabinerConfig = () => {
   try {
     writeToProfile(
       "KarabinerTs",
-      [...generalUse, ...emacsRule, ...macKeyboard],
+      [...generalUseRules, ...emacsRules, ...macKeyboardRules],
       {
         "basic.simultaneous_threshold_milliseconds": 50,
         "basic.to_delayed_action_delay_milliseconds": 500,
