@@ -7,7 +7,6 @@ export const DEVICES = {
   "macBuiltInKeyboard": {
     "is_keyboard": true,
     "is_pointing_device": false,
-    "location_id": 51,
     "product_id": 834,
     "vendor_id": 1452,
   },
@@ -17,7 +16,6 @@ export const DEVICES = {
   "macBuiltInTrackpad": {
     "is_keyboard": false,
     "is_pointing_device": true,
-    "location_id": 51,
     "product_id": 834,
     "vendor_id": 1452,
   },
@@ -27,7 +25,6 @@ export const DEVICES = {
   "macExternalTrackpad": {
     "is_keyboard": false,
     "is_pointing_device": true,
-    "location_id": 1810711524,
     "product_id": 613,
     "vendor_id": 76,
   },
