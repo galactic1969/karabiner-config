@@ -20,7 +20,7 @@
     "commands": [
       {
         "match": "\\.ts$",
-        "cmd": "deno run -A index.ts",
+        "cmd": "deno run -A src/index.ts",
         "autoShowOutputPanel": "error",
       },
     ]

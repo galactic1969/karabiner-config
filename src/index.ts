@@ -1,6 +1,6 @@
 import { writeToProfile } from "https://deno.land/x/karabinerts@1.31.0/deno.ts";
 
-import { emacsRules, generalUseRules, macKeyboardRules } from "./rules/index.ts";
+import { emacsRules, generalUseRules, macKeyboardRules } from "../src/rules/index.ts";
 
 const SUCCESS_SOUND = "Funk.aiff";
 const FAILURE_SOUND = "Basso.aiff";
