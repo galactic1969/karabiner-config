@@ -2,7 +2,7 @@ import { map, rule, RuleBuilder } from "https://deno.land/x/karabinerts@1.31.0/d
 import { onlyMacKeyboard } from "../devices.ts";
 
 /**
- * caps lock -> control
+ * macの物理caps lockキーをcontrolにする (他の修飾キーと一緒に押した場合もctrlにする)
  */
 const capsLockToControl: RuleBuilder[] = [
   rule("caps lock ▶ ctrl", onlyMacKeyboard)
@@ -28,6 +28,9 @@ const capsLockToControl: RuleBuilder[] = [
     ]),
 ];
 
+/**
+ * macの物理commandキーを kana / かな にする
+ */
 const cmdToKana: RuleBuilder[] = [
   rule("cmd + space ▶ kana", onlyMacKeyboard)
     .manipulators([
