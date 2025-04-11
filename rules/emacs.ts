@@ -6,7 +6,7 @@ import {
   withMapper,
 } from "https://deno.land/x/karabinerts@1.31.0/deno.ts";
 
-import { ignoreIDEs } from "../bundle-identifiers.ts";
+import { ignoreIDEs, ignoreITerm } from "../bundle-identifiers.ts";
 
 const EMACS_MARKING = "emacs_marking";
 
@@ -69,6 +69,42 @@ const emacsMark: RuleBuilder[] = [
     ),
 ];
 
+/**
+ * control + a / e で行頭 / 行末に移動
+ */
+const jumpToStartOrEnd: RuleBuilder[] = [
+  rule("ctrl + a ▶ emacs jump to start", ignoreITerm).manipulators(
+    [
+      map("a", "control")
+        .to("left_arrow", "command"),
+      map("e", "control")
+        .to("right_arrow", "command"),
+    ],
+  ),
+];
+
+/**
+ * カーソル移動
+ */
+const moveCursor: RuleBuilder[] = [
+  rule("ctrl + a ▶ emacs jump to start", ignoreITerm).manipulators(
+    [
+      // control + b / f
+      map("b", "control")
+        .to("left_arrow", {}, { repeat: true }),
+      map("f", "control")
+        .to("right_arrow", {}, { repeat: true }),
+      // control + n / p
+      map("n", "control")
+        .to("down_arrow", {}, { repeat: true }),
+      map("p", "control")
+        .to("up_arrow", {}, { repeat: true }),
+    ],
+  ),
+];
+
 export const emacsRule: RuleBuilder[] = [
   ...emacsMark,
+  ...jumpToStartOrEnd,
+  ...moveCursor,
 ];
